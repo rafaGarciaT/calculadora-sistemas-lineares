@@ -40,7 +40,7 @@ Cada branch deve mexer com um módulo específico do projeto:
 - **sistema.py**: realiza operações auxiliares relacionada a matrizes.
 
 A main já possui o fluxo do programa, e os módulos já tem funções vazias com parâmetros definidos. O trabalho de cada branch é implementar essas funções (apenas substituindo o pass, não apague os docstrings, eles definem o que exatamente a função deve ter).
-Para equilibrar as tarefas, cada integrante escolhe um módulo para implementar, mas quem escolher o input_output.py deve também fazer o sistema.py.
+Para equilibrar as tarefas, cada integrante escolhe um módulo para implementar.
 
 ## Bibliotecas
 
