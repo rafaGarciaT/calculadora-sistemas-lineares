@@ -43,7 +43,7 @@ calculadora-sistemas-lineares/
 | Input/Output                            |      Ana Carolina      |
 | Sistema                                 |       Caio Danjo       |
 | Escalonamento                           |          ...           |
-| Solver                                  |          ...           |
+| Solver                                  |       Lívia Lana       |
 
 
 ## O Que Cada Branch Deve Conter
