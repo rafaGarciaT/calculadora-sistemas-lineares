@@ -20,7 +20,19 @@ def classificar_sistema(sistema_escalonado: np.ndarray) -> str:
     Returns:
         str: "SPD", "SPI" ou "SI".
     """
-    pass
+    n = obter_numero_de_variaveis(sistema_escalonado)
+    
+    linhas_nulas = 0
+    for i in range(n):
+        if np.allclose(sistema_escalonado[i, :n], 0):
+            linhas_nulas += 1
+            if not np.isclose(sistema_escalonado[i, n], 0):
+                return "SI"
+    
+    if linhas_nulas > 0:
+        return "SPI"
+    
+    return "SPD"
 
 def substituicao_retroativa(sistema_escalonado: np.ndarray) -> np.ndarray:
     """
@@ -38,7 +50,18 @@ def substituicao_retroativa(sistema_escalonado: np.ndarray) -> np.ndarray:
     Returns:
         np.ndarray: vetor unidimensional com a solução de cada variável.
     """
-    pass
+    n = obter_numero_de_variaveis(sistema_escalonado)
+    solucao = np.zeros(n)
+    
+    for i in range(n - 1, -1, -1):
+        solucao[i] = sistema_escalonado[i, n]
+        
+        for j in range(i + 1, n):
+            solucao[i] -= sistema_escalonado[i, j] * solucao[j]
+        
+        solucao[i] /= sistema_escalonado[i, i]
+    
+    return solucao
 
 def resolver(sistema_escalonado: np.ndarray) -> np.ndarray | str:
     """
