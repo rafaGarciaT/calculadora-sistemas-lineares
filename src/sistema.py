@@ -30,7 +30,7 @@ def copiar_sistema(sistema: np.ndarray) -> np.ndarray:
     Returns:
         np.ndarray: cópia independente da matriz recebida.
     """
-    pass
+    return np.copy(sistema)
 
 def validar_sistema(sistema: np.ndarray) -> bool:
     """
@@ -57,5 +57,4 @@ def obter_numero_de_variaveis(sistema: np.ndarray) -> int:
     Returns:
         int: número de variáveis (n).
     """
-    pass
-
+    return sistema.shape[0]
