@@ -1,5 +1,5 @@
 import numpy as np
-from src.sistema import copiar_sistema, obter_numero_de_variaveis
+from sistema import copiar_sistema, obter_numero_de_variaveis
 
 
 def escalonar_sistema(sistema: np.ndarray) -> np.ndarray:
