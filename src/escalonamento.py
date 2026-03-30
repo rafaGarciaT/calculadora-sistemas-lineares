@@ -1,5 +1,5 @@
 import numpy as np
-from sistema import copiar_sistema, obter_numero_de_variaveis
+from .sistema import copiar_sistema, obter_numero_de_variaveis
 
 
 def escalonar_sistema(sistema: np.ndarray) -> np.ndarray:
@@ -18,7 +18,7 @@ def escalonar_sistema(sistema: np.ndarray) -> np.ndarray:
     Returns:
         np.ndarray: matriz aumentada escalonada (triangular superior).
     """
-    mat = copiar_sistema(sistema)
+    mat = copiar_sistema(sistema).astype(float, copy=True)
     n = obter_numero_de_variaveis(mat)
 
     for i in range(n):

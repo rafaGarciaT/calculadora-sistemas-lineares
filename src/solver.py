@@ -1,5 +1,6 @@
 import numpy as np
-from src.sistema import obter_numero_de_variaveis
+from .sistema import obter_numero_de_variaveis
+
 
 def classificar_sistema(sistema_escalonado: np.ndarray) -> str:
     """
@@ -34,6 +35,7 @@ def classificar_sistema(sistema_escalonado: np.ndarray) -> str:
     
     return "SPD"
 
+
 def substituicao_retroativa(sistema_escalonado: np.ndarray) -> np.ndarray:
     """
     Realiza a substituição retroativa na matriz escalonada para obter
@@ -63,6 +65,7 @@ def substituicao_retroativa(sistema_escalonado: np.ndarray) -> np.ndarray:
     
     return solucao
 
+
 def resolver(sistema_escalonado: np.ndarray) -> np.ndarray | str:
     """
     Orquestra a resolução do sistema linear escalonado:
@@ -82,6 +85,6 @@ def resolver(sistema_escalonado: np.ndarray) -> np.ndarray | str:
     if tipo == "SPD":
         return substituicao_retroativa(sistema_escalonado)
     elif tipo == "SPI":
-        return "Sistema Possível Indeterminado (infinitas soluções)"
+        return "SPI"
     else:
-        return "Sistema Impossível (sem solução)"
+        return "SI"
