@@ -39,7 +39,6 @@ calculadora-sistemas-lineares/
 
 | Etapa                                   | Responsável            |
 |-----------------------------------------|------------------------|
-| Main                                    |          ...           |
 | Input/Output                            |      Ana Carolina      |
 | Sistema                                 |       Caio Danjo       |
 | Escalonamento                           |          ...           |
