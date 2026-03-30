@@ -3,7 +3,11 @@
 Este projeto implementa uma calculadora em Python que resolve sistemas lineares utilizando o método de escalonamento (Eliminação de Gauss).
 
 ## Integrantes 
-
+- Ana Carolina Miranda
+- Caio Danjo
+- José Guilherme
+- Livia Lana
+- Rafael Garcia
 
 
 ## Estrutura do Código A Ser Desenvolvido
@@ -30,6 +34,16 @@ calculadora-sistemas-lineares/
 └── README.md
 
 ```
+
+## Etapas do código - divisão
+
+| Etapa                                   | Responsável            |
+|-----------------------------------------|------------------------|
+| Input/Output                            |      Ana Carolina      |
+| Sistema                                 |       Caio Danjo       |
+| Escalonamento                           |          ...           |
+| Solver                                  |       Lívia Lana       |
+
 
 ## O Que Cada Branch Deve Conter
 

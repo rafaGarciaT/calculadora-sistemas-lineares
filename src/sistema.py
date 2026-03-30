@@ -8,6 +8,16 @@ def criar_sistema(tamanho: int) -> np.ndarray:
     return np.zeros((tamanho, tamanho + 1), dtype=float)
 
 def copiar_sistema(sistema: np.ndarray) -> np.ndarray:
+    """
+    Cria uma cópia profunda da matriz aumentada para evitar
+    modificações no sistema original.
+
+    Args:
+        sistema: matriz aumentada (n x n+1).
+
+    Returns:
+        np.ndarray: cópia independente da matriz recebida.
+    """
     return np.copy(sistema)
 
 def validar_sistema(sistema: np.ndarray) -> bool:
