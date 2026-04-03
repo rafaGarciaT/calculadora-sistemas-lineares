@@ -1,8 +1,37 @@
-# calculadora-sistemas-lineares
+# Calculadora de Sistemas Lineares
+Calculadora Python para resolver sistemas lineares utilizando o método de Eliminação de Gauss (ou, escalonamento). 
+O projeto implementa a transformação de matrizes aumentadas em forma triangular superior e classifica sistemas como determinados (SPD), indeterminados (SPI) ou impossíveis (SI).
 
-Este projeto implementa uma calculadora em Python que resolve sistemas lineares utilizando o método de escalonamento (Eliminação de Gauss).
+## Execução
 
-## Integrantes 
+```bash
+python -m src.main
+```
+
+Ou copie o código em monolito.py e cole em um compilador online.
+
+## Estrutura do Projeto
+
+```
+calculadora-sistemas-lineares/
+├── src/
+│   ├── __init__.py          # Exportações dos módulos
+│   ├── main.py              # Ponto de entrada da aplicação
+│   ├── input_output.py      # Entrada de dados e formatação de saída
+│   ├── sistema.py           # Operações com matrizes
+│   ├── escalonamento.py     # Eliminação de Gauss
+│   └── solver.py            # Classificação e resolução do sistema
+├── tests/                   # Testes unitários
+├── notebooks/               # Jupyter notebooks explicativos
+├── requirements.txt         # Dependências do projeto
+└── README.md              
+```
+
+## Documentação Adicional
+- `notebooks/` - Notebooks Jupyter com explicações detalhadas
+
+## 👥 Equipe Original do Projeto
+
 - Ana Carolina Miranda
 - Caio Danjo
 - José Guilherme
@@ -10,62 +39,11 @@ Este projeto implementa uma calculadora em Python que resolve sistemas lineares 
 - Rafael Garcia
 
 
-## Estrutura do Código A Ser Desenvolvido
-
-```
-calculadora-sistemas-lineares/
-│
-├── src/
-│   ├── main.py
-│   ├── input_output.py
-│   ├── sistema.py
-│   ├── escalonamento.py
-│   └── solver.py
-│
-├── tests/
-│
-├── docs/
-│
-├── notebooks/      # Notebooks explicativos
-│
-├── exemplos/       # Exemplos para usarmos no vídeo
-│
-├── requirements.txt
-└── README.md
-
-```
-
-## Etapas do código - divisão
-
-| Etapa                                   | Responsável            |
-|-----------------------------------------|------------------------|
-| Input/Output                            |      Ana Carolina      |
-| Sistema                                 |       Caio Danjo       |
-| Escalonamento                           |          ...           |
-| Solver                                  |       Lívia Lana       |
-
-
-## O Que Cada Branch Deve Conter
-
-Cada branch deve mexer com um módulo específico do projeto:
-- **input_output.py**: solicita o tamanho do sistema, os coeficientes e os termos independentes. Imprime o sistema formatado, escalonado, e a solução.
-- **escalonamento.py**: realiza o processo de escalonamento e retorna a matriz escalonada.
-- **solver.py**: analisa a matriz escalonada, determina o tipo de sistema (SPD, SPI, SI) e resolve o sistema por substituição se possível.
-- **sistema.py**: realiza operações auxiliares relacionada a matrizes.
-
-A main já possui o fluxo do programa, e os módulos já tem funções vazias com parâmetros definidos. O trabalho de cada branch é implementar essas funções (apenas substituindo o pass, não apague os docstrings, eles definem o que exatamente a função deve ter).
-Para equilibrar as tarefas, cada integrante escolhe um módulo para implementar.
-
-## Bibliotecas
-
-Utilizaremos o numpy para a manipulação de matrizes, mas o processo de escalonamento e resolução deve ser implementado manualmente.
-
-## Teoria
-
-Se você não lembra muito o método de escalonamento, em docs/ eu deixei alguns materiais que pode ajudar:
-- um .md gerado que explica o conteúdo
-- dois PDFs das minhas anotações que fiz a partir da gravação da aula, um sobre o processo de escalonamento e outro sobre os tipos de sistemas lineares.
-
-## Vídeo
-
-Vamos cuidar disso depois que o código estiver pronto.
+| Etapa/Módulo  | Responsável    |
+|---------------|----------------|
+| Input/Output  | Ana Carolina   |
+| Sistema       | Caio Danjo     |
+| Escalonamento | José Guilherme |
+| Solver        | Lívia Lana     |
+| Main          | Rafael Garcia  |
+| Notebooks     | Rafael Garcia  |

@@ -1,5 +1,5 @@
 import numpy as np
-from .sistema import obter_numero_de_variaveis
+from src.sistema import obter_numero_de_variaveis
 
 
 def classificar_sistema(sistema_escalonado: np.ndarray) -> str:

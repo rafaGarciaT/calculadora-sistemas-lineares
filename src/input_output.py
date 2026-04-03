@@ -1,5 +1,5 @@
 import numpy
-from .sistema import criar_sistema, validar_sistema
+from src.sistema import criar_sistema, validar_sistema
 
 
 def parse_numero(texto: str) -> float | None:
