@@ -85,7 +85,6 @@ def imprimir_sistema(sistema: np.ndarray) -> None:
     n = sistema.shape[0]
     m = sistema.shape[1]
 
-    print("\nMatriz Aumentada [A|b]:")
     for i in range(n):
         linha = ""
         for j in range(m):
@@ -361,9 +360,11 @@ def resolver(sistema_escalonado: np.ndarray) -> np.ndarray | str:
 def main():
     tamanho_sistema = solicitar_tamanho_de_sistema()
     sistema = solicitar_sistema(tamanho_sistema)
+    print("\nMatriz Aumentada [A|b]:")
     imprimir_sistema(sistema)
 
     sistema_escalonado = escalonar_sistema(sistema)
+    print("\nMatriz Escalonada [A|b]:")
     imprimir_sistema(sistema_escalonado)
 
     resultado = resolver(sistema_escalonado)

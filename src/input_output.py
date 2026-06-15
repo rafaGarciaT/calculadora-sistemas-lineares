@@ -85,8 +85,7 @@ def imprimir_sistema(sistema: numpy.ndarray) -> None:
     """
     n = sistema.shape[0]
     m = sistema.shape[1]
-    
-    print("\nMatriz Aumentada [A|b]:")
+
     for i in range(n):
         linha = ""
         for j in range(m):

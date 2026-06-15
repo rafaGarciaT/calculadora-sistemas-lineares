@@ -4,9 +4,11 @@ from src import escalonar_sistema, solicitar_tamanho_de_sistema, solicitar_siste
 def main():
     tamanho_sistema = solicitar_tamanho_de_sistema()
     sistema = solicitar_sistema(tamanho_sistema)
+    print("\nMatriz Aumentada [A|b]:")
     imprimir_sistema(sistema)
 
     sistema_escalonado = escalonar_sistema(sistema)
+    print("\nMatriz Escalonada [A|b]:")
     imprimir_sistema(sistema_escalonado)
 
     resultado = resolver(sistema_escalonado)
